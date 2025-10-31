@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 st.set_page_config(page_title="IPL — Exact Columns Interactive Dashboard", layout="wide")
-st.title("🏏 IPL — Interactive Dashboard (uses exact CSV column names)")
+st.title("🏏 IPL — Interactive Dashboard ")
 
 st.markdown(
     """
