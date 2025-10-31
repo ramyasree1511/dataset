@@ -68,8 +68,8 @@ with st.expander("🔥 Which team won more often while batting first?"):
 
 # 4) Which team won more often while fielding first?
 with st.expander("🎯 Which team won more often while fielding first?"):
-    if col("Win_By_Wickets") and col("Winner"):
-        field_first = df[df["Win_By_Wickets"] > 0]["Winner"].value_counts()
+    if col("Win_By_Wickets ") and col("Winner"):
+        field_first = df[df["Win_By_Wickets "] > 0]["Winner"].value_counts()
         st.write(field_first.head(20))
         st.bar_chart(field_first.head(10))
         if not field_first.empty:
@@ -181,9 +181,9 @@ with st.expander("🏙️ Which city's teams performed the best overall?"):
 
 # 14) Percentage won by batting first vs fielding first
 with st.expander("⚖️ What percentage of matches were won by batting first versus fielding first?"):
-    if col("Win_By_Runs") and col("Win_By_Wickets"):
+    if col("Win_By_Runs") and col("Win_By_Wickets "):
         bat_wins = (df["Win_By_Runs"] > 0).sum()
-        field_wins = (df["Win_By_Wickets"] > 0).sum()
+        field_wins = (df["Win_By_Wickets "] > 0).sum()
         total_decisive = bat_wins + field_wins
         if total_decisive > 0:
             st.write({
